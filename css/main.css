@@ -28,8 +28,14 @@ body {
 }
 
 header{
-	background: url(../img/BEAT-logo1.png) no-repeat center center fixed;
+	background: url(../img/BEAT-logo1.png) no-repeat top center fixed;
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-width: 100%;
 	}
+
+
 /*  #0042a5v  */
 
 
@@ -47,3 +53,6 @@ header{
 
 
 
+
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

@@ -1,4 +1,4 @@
-﻿@inherits umbraco.MacroEngines.DynamicNodeContext
+@inherits umbraco.MacroEngines.DynamicNodeContext
 
 @*
 	This snippet shows how simple it is to fetch only children of a certain Document Type using Razor. Instead of
@@ -10,26 +10,17 @@
 
 @{    
 	@*Build a query and return the visible items *@
-	var selection= Model.Concerts.Where("Visible");
+	var selection= Model.Textpages.Where(query).Where("Visible");
 }
 
 @*Determine if there are any nodes in the selection, then render list *@
 @if(selection.Any()){
 
-   <ul class="span6">
+   <ul>
      @foreach(var page in selection){                
-       <li><a href="@page.Url"><h4>@page.Name</h4></a></li> 
-		   <p>
-		   @page.Date
-		   <br/>
-		   @page.Place
-			<br/>
-		   @page.Summary
-		   </p>
-     	<p><hr id="hr"></p>
-	 }                 
+       <li><a href="@page.Url">@page.Name</a></li> 
+     }                 
    </ul>             
 
 }
- 
 

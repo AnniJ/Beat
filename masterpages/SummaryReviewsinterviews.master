@@ -2,15 +2,27 @@
 
 <asp:Content ContentPlaceHolderID="Content" runat="server">
 	
+	<main class="row">
+	
 	<umbraco:Item field="introduction" runat="server" />
 
 	 <section class="span6" id="reviews">
 		 <header>
-			 <h3>ANMELDELSER &amp; INTERVIEWS</h3>
+			 <h3>ANMELDELSER</h3>
 			 <hr id="hr">
 		 </header>
+		
 	<div class="row">
 		<umbraco:Macro Alias="ListReviews" runat="server"></umbraco:Macro>
 	</div>
-	
+		 </section>
+	<section class="span6" id="reviews">
+		 <header>
+			 <h3>INTERVIEWS</h3>
+			 <hr id="hr">
+		 </header>
+	<div class="row">
+		<umbraco:Macro Alias="ListInterviews" runat="server" />
+	</div>
+		</section> 
 </asp:Content>

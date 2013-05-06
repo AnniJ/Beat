@@ -10,26 +10,27 @@
 
 @{    
 	@*Build a query and return the visible items *@
-	var selection= Model.Concerts.Where("Visible");
+	var selection= Model.Interviews.Where("Visible");
 }
 
 @*Determine if there are any nodes in the selection, then render list *@
 @if(selection.Any()){
 
-   <ul class="span6">
-     @foreach(var page in selection){                
-       <li><a href="@page.Url"><h4>@page.Name</h4></a></li> 
-		   <p>
-		   @page.Date
-		   <br/>
-		   @page.Place
-			<br/>
-		   @page.Summary
-		   </p>
-     	<p><hr id="hr"></p>
-	 }                 
-   </ul>             
+  <ul>
+     @foreach(var page in selection.OrderBy("CreateDate desc")){                
+       	<li class="span6">
+			<div class="media-body">
+		   		<a href="@page.Url"><h4>@page.Name</h4></a>
+			<p>
+				@page.Summary
+				<br/>
+				@page.CreateDate.ToLongDateString()
+			</p>
+			</div>
+			<p><hr id="hr"></p>
+		</li> 
+     }                 
+   </ul>                          
 
 }
- 
 
