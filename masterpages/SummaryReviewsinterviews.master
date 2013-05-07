@@ -12,10 +12,12 @@
 			 <hr id="hr">
 		 </header>
 		
-	<div class="row">
+		<div class="row">
 		<umbraco:Macro Alias="ListReviews" runat="server"></umbraco:Macro>
-	</div>
+		 </div>
 		 </section>
+		
+		
 	<section class="span6" id="reviews">
 		 <header>
 			 <h3>INTERVIEWS</h3>
